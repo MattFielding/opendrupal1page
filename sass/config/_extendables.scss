@@ -1,0 +1,30 @@
+%clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%transition {
+  @include transition(all 0.5s ease);
+}
+
+%link {
+  @extend %transition;
+  color: $link;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:focus {
+    color: darken($link, 30%);
+  }
+}
+
+%lato {
+  font-family: 'Lato', sans-serif;
+}
