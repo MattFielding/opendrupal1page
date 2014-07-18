@@ -1,0 +1,249 @@
+@import 'config/_base';
+
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  border-top: 9px solid $primary;
+}
+
+body {
+  @extend %lato;
+  color: $body;
+  line-height: 1.2;
+}
+
+.container {
+  @extend %clearfix;
+  text-align: center;
+  min-width: $min-width;
+  max-width: $max-width;
+  margin: 0 auto 40px auto;
+  padding: 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .5em 0;
+}
+
+h1, h2 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 0 0 .5em 0;
+  line-height: 1.5;
+}
+
+a {
+  @extend %link;
+}
+
+input {
+  @extend %lato;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image {
+  @extend %transition;
+  padding: 15px 0;
+  @include respond-to(m) {
+    width: 24%;
+  }
+  @include respond-to(l) {
+    width: 16%;
+  }
+}
+
+.menu {
+  list-style: none;
+  li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 45px;
+    font-size: 1.2em;
+    line-height: 2em;
+    &.last {
+      padding-right: 0;
+    }
+  }
+}
+
+.main {
+  text-align: center;
+}
+
+.main-article {
+  margin: 0 auto;
+  @include respond-to(m) {
+    width: grid-span(10, 1);
+  }
+  @include respond-to(l) {
+    width: grid-span(8, 1);
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px $primary solid;
+  margin: 15px auto 30px auto;
+  &.post-free-and-open {
+    width: 56%;
+    margin-top: 30px;
+  }
+}
+
+#mc-embed-signup {
+  border: 1px solid $primary;
+  padding: 10px;
+  margin: 40px auto;
+  @include respond-to(m) {
+    width: grid-span(10, 1);
+    padding: 36px 72px;
+  }
+  ul {
+    list-style: none;
+    text-align: left;
+  }
+  li {
+    padding-bottom: 2px;
+  }
+}
+
+#mc-embedded-subscribe-form {
+  @extend %clearfix;
+}
+
+.text-input {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  @include respond-to(m) {
+    margin-bottom: 32px;
+    &.email {
+      @include grid-span(1, 1, 3, 0);
+    }
+    &.first-name {
+      @include grid-span(1, 2, 3, 0);
+    }
+    &.last-name {
+      @include grid-span(1, 3, 3, 0);
+    }
+  }
+  input {
+    text-align: center;
+    border: 1px solid $primary;
+    padding: 20px 10px;
+    margin: 0;
+    font-size: 1.2em;
+    width: 100%;
+    @include respond-to(m) {
+      &.email {
+        border-right: none;
+      }
+      &.last-name {
+        border-left: none;
+      }
+    }
+  }
+}
+
+.checkbox-input {
+  @extend %clearfix;
+  position: relative;
+  clear: left;
+  text-align: left;
+}
+
+#mc-embedded-subscribe {
+  @extend %link;
+  padding: 15px 50px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: $drupal-dark;
+  background-image: linear-gradient(top, $drupal-light, $drupal-dark);
+  color: #fff;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  @include respond-to(m) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: auto;
+  }
+}
+
+.community-title {
+  margin-bottom: 1.2em;
+}
+
+.community {
+  @extend %clearfix;
+  @include respond-to(l) {
+    .gplus {
+      @include grid-span(1, 1, 2, .04);
+    }
+    .gdo {
+      @include grid-span(1, 2, 2, .04);
+      padding: 50px;
+    }
+  }
+}
+
+.gplus {
+  background: #f8f9f9;
+  padding: 10px;
+  div {
+    width: 100% important;
+  }
+  iframe {
+    left: 50% !important;
+  }
+}
+
+.gdo {
+  display: block;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  background-color: $drupal-dark;
+  background-image: linear-gradient(top, $drupal-light, $drupal-dark);
+}
+
+.gdo-1 {
+  font-size: 1.8em;
+}
+
+.gdo-2 {
+  display: block;
+  margin: 16px auto;
+  padding-left: 10px;
+}
+
+.gdo-3 {
+  font-size: 2.1em;
+}
+
+label.placeholder {
+  display: none;
+  .lte-ie8 & {
+    display: block;
+  }
+}

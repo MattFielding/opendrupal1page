@@ -1,0 +1,27 @@
+// Layout
+$min-width: 320px;
+$max-width: 920px;
+
+// Singularity
+//@include sgs-change($setting, $value);
+@include add-grid(12);
+@include add-gutter(0.15);
+
+// Breakpoint
+$breakpoint-no-query-fallbacks: true;
+$breakpoint-to-ems: true;
+$breakpoints: add-breakpoint('s', 320px);
+$breakpoints: add-breakpoint('m', (490px, 'no-query' '.lte-ie8'));
+$breakpoints: add-breakpoint('l', (800px, 'no-query' '.lte-ie8'));
+$breakpoints: add-breakpoint('xl', (1080px, 'no-query' '.lte-ie8'));
+$breakpoints: add-breakpoint('touch', 'pointer coarse');
+
+// Colour
+$highlight: #ffffff;
+$primary: #26a8e0;
+$drupal-light: #13b8e8;
+$drupal-dark: #0082ca;
+$body: #666666;
+$link: $primary;
+$success: #b4ff0d;
+$error: #ff4626;
