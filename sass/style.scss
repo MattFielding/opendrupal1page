@@ -247,3 +247,17 @@ label.placeholder {
     display: block;
   }
 }
+
+.hosting-credit {
+  padding-top: 40px;
+  text-align: right;
+  a {
+    color: lighten($body, 20%);
+    border-bottom: 1px solid lighten($body, 40%);
+    &:hover {
+      color: $body;
+      border-bottom: 1px solid lighten($body, 10%);
+    }
+  }
+
+}
